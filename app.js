@@ -15,6 +15,9 @@ controller.spawn({
 
 controller.hears('(\\\\[\w\\\.]*|"\\\\[\w\.].*")', function(bot, message) {
     var matches = message.text.match(/(\\\\[\w\\\.]*|"\\\\[\w\.].*")/);
-    bot.reply(message, matches[0]);
+    bot.reply(message, `
+file:${matches[0].replace(/\\/g, '/')}
+smb:${matches[0].replace(/\\/g, '/')}
+`);
 });
 

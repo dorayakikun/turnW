@@ -1,2 +1,12 @@
 runtime: nodejs
 env: flex
+
+manual_scaling:
+  instances: 1
+
+env_variables:
+  NODE_SLACK_BOT_TOKEN: 'Enter your API TOKEN'
+
+skip_files:
+ - ^node_modules$
+

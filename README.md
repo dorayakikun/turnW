@@ -5,11 +5,12 @@
 1. [Download and install Cloud SDK](https://cloud.google.com/sdk/)
 2. Open `app.yaml`, enter your Slack API TOKEN instead of the dummy text.
 3. Enter bellow the command
-  ```
-  $ gcloud config set project {Enter your GCP Project ID}
-  $ gcloud auth login
-  $ gcloud app deploy
-  ```
+
+```
+$ gcloud config set project {Enter your GCP Project ID}
+$ gcloud auth login
+$ gcloud app deploy
+```
 
 ***
 

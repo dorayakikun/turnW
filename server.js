@@ -2,6 +2,7 @@ var Botkit = require('botkit');
 
 var controller = Botkit.slackbot({
     debug: false,
+    retry: 10,
 });
 
 if (!process.env.NODE_SLACK_BOT_TOKEN) {

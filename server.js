@@ -13,8 +13,8 @@ controller.spawn({
     token: process.env.NODE_SLACK_BOT_TOKEN,
 }).startRTM();
 
-controller.hears(['(\\\\[\w\\\.\-_\\\/\$%~\u3040-\uFAFF]*|"\\\\[\w\.\-_\\\/\$%~\u3040-\uFAFF].*")'], ['ambient'], function (bot, message) {
-    var matches = message.text.match(/(\\\\[\w\\\.\-_\\\/\$%~\u3040-\uFAFF]*|"\\\\[\w\.\-_\\\/\$%~\u3040-\uFAFF].*")/);
+controller.hears(['(\\\\[\w\\\.\-_\\\/\$%~&;　\u3000-\uFAFF\uFF01-\uFF60]*|"\\\\[\w\\\.\-_\\\/\$%~&;　\u3000-\uFAFF\uFF01-\uFF60].*")'], ['direct_message', 'ambient'], function (bot, message) {
+    var matches = message.text.match(/(\\\\[\w\\\.\-_\\\/\$%~&;　\u3000-\uFAFF\uFF01-\uFF60]*|"\\\\[\w\\\.\-_\\\/\$%~&;　\u3000-\uFAFF\uFF01-\uFF60].*")/);
 
     bot.api.reactions.add({
         timestamp: message.ts,
@@ -27,6 +27,13 @@ controller.hears(['(\\\\[\w\\\.\-_\\\/\$%~\u3040-\uFAFF]*|"\\\\[\w\.\-_\\\/\$%~\
     });
 
     controller.storage.users.get(message.user, function (err, user) {
+        if (matches[0].indexOf('\u3000') !== -1) {
+            bot.reply(message, `
+file:${encodeURI(matches[0].replace(/\\/g, '/'))}
+
+smb:${encodeURI(matches[0].replace(/\\/g, '/'))}`);
+            return;
+        }
         bot.reply(message, `
 file:${matches[0].replace(/\\/g, '/')}
 smb:${matches[0].replace(/\\/g, '/')}`);

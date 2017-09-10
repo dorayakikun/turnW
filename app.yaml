@@ -1,3 +1,4 @@
+service: text2UriBot
 runtime: nodejs
 env: flex
 

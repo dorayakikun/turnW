@@ -1,5 +1,7 @@
 # text2UriBot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dorayakikun/text2UriBot.svg)](https://greenkeeper.io/)
+
 ## How to use
 
 1. [Download and install Cloud SDK](https://cloud.google.com/sdk/)

@@ -1,6 +1,7 @@
 # text2UriBot
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/dorayakikun/text2UriBot.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/dorayakikun/text2UriBot.svg?style=svg)](https://circleci.com/gh/dorayakikun/text2UriBot)
 
 ## How to use
 

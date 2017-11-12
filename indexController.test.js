@@ -2,11 +2,11 @@ const assert = require('assert');
 const Botmock = require('botkit-mock');
 const myController = require("./indexController");
 
-describe("controller tests",()=>{
-  beforeEach(()=>{
+describe("controller tests", () => {
+  beforeEach(() => {
     this.controller = Botmock({});
     // type can be ‘slack’, facebook’, or null
-    this.bot = this.controller.spawn({type: 'slack'});
+    this.bot = this.controller.spawn({ type: 'slack' });
     myController(this.controller);
   });
 
@@ -18,7 +18,7 @@ describe("controller tests",()=>{
           channel: 'someChannel',
           messages: [
             {
-              text: '\\\\myFileServer\\tests', isAssertion: true
+              text: '\\\\myFileServer\\tests', isAssertion: true, _pipeline: { stage: 'receive' }
             }
           ]
         }

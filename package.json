@@ -25,6 +25,6 @@
     "botkit-mock": "^0.1.3"
   },
   "devDependencies": {
-    "mocha": "^4.0.0"
+    "mocha": "^5.0.0"
   }
 }

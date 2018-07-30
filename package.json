@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "dorayakikun <amakunai.dorayaki@gmail.com>",
   "engines": {
-    "node": ">=8.0.0"
+    "node": "9.x"
   },
   "license": "MIT",
   "bugs": {

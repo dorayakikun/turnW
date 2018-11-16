@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/dorayakikun/turnW#readme",
   "dependencies": {
-    "botkit": "^0.6.16",
+    "botkit": "^0.6.21",
     "botkit-mock": "^0.1.10"
   },
   "devDependencies": {
